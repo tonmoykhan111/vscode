@@ -9,4 +9,4 @@ esac
 
 ROOT="$(dirname "$(dirname "$(readlink -f "$0")")")"
 
-"$ROOT/node" ${INSPECT:-} "$ROOT/out/server-main.js" "$@"
+$VSCODE_CUSTOM_GLIBC_LINKER "$ROOT/node" ${INSPECT:-} "$ROOT/out/server-main.js" "$@"
